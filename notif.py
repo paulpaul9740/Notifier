@@ -253,7 +253,7 @@ if __name__ == "__main__":
                                 timeStr = request[2]
                                 userInputToTimestamp(dateStr,timeStr,newEvent)
                                 del request[0:3]
-                                message = (''.join(x + ' ' for x in request))
+                                message = ' '.join(request)
                                 if len(message) > int(server_config["maxSymbolsPerMessage"]):
                                     write_msg(event.user_id,event.random_id, "Слишком длинное сообщение")
                                     continue
